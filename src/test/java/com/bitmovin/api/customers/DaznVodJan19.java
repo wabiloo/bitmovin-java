@@ -68,7 +68,7 @@ public class DaznVodJan19
     private static SimpleDateFormat FORMATTER = new SimpleDateFormat("YYYYMMdd'T'HHmmss");
     private static String OUTPUT_BASE_PATH = "perform/vod-may-2019";
 
-    private static String COLLECTION = "cbr-vbv1sec";
+    private static String COLLECTION = "cbr-vbv1frame";
 
     private static String DEINTERLACE_FILTER_FRAME = "0c72a2b3-8f47-4a9d-9af5-af51f96e4a88";
     private static String DEINTERLACE_FILTER_FIELD = "23d68d5f-62dd-413d-99a2-d5e1cd95e397";
@@ -370,7 +370,8 @@ public class DaznVodJan19
             videoConfig.setMaxBitrate(videoBitrate);
             videoConfig.setMinBitrate(videoBitrate);
             // Buffer size based on number of seconds
-            videoConfig.setBufsize((long)(videoBitrate * BUFSIZE_IN_SECONDS));
+            //videoConfig.setBufsize((long)(videoBitrate * BUFSIZE_IN_SECONDS));
+            videoConfig.setBufsize((long)(videoBitrate / outputConfig.frameRate));
 
             // GOP of 48 for 25fps, and 96 for 50fps
             videoConfig.setMaxGop((int)Math.round(outputConfig.frameRate * outputConfig.gopSize));
