@@ -56,19 +56,18 @@ public class DaznVodJan19
     private static String GCS_INPUT_ID = "7170dab0-187c-4cd4-9c89-ae05521a11a8";
     private static String GCS_OUTPUT_ID = "fbbbe78e-27a5-4f6d-a9f8-56168069396a";
 
-    private static String ENCODER_VERSION = "NIGHTLY";
-    private static EncodingMode ENCODING_MODE = EncodingMode.STANDARD;
+    private static String ENCODER_VERSION = "CHRISTIAN-TEST";
     private static String RELATIVE_INPUT_PATH = "analysis/perform/vod-jan-2019/";
     private static List<String> FILES = Arrays.asList(
-            "MOT_F1_HL_181111_Brazil_Race_ja_1541969119243.mxf"
+            //"MOT_F1_HL_181111_Brazil_Race_ja_1541969119243.mxf"
             //"SOC_EPL_HL_181111_MCI-MUN_MD12_de_1541984683866.mxf",
             //"SOC_SEA_HL_181111_SAS-LAZ_MD12_it_1541965846814.mxf",
-            //"SOC_UCL_HL_1801106_AMA-BVB_MD4_en_1541553866489.mxf"
+            "SOC_UCL_HL_1801106_AMA-BVB_MD4_en_1541553866489.mxf"
     );
     private static SimpleDateFormat FORMATTER = new SimpleDateFormat("YYYYMMdd'T'HHmmss");
     private static String OUTPUT_BASE_PATH = "perform/vod-may-2019";
 
-    private static String COLLECTION = "cbr-vbv1frame";
+    private static String COLLECTION = "cbr-vbv1sec-2pass-hrdfix";
 
     private static String DEINTERLACE_FILTER_FRAME = "0c72a2b3-8f47-4a9d-9af5-af51f96e4a88";
     private static String DEINTERLACE_FILTER_FIELD = "23d68d5f-62dd-413d-99a2-d5e1cd95e397";
