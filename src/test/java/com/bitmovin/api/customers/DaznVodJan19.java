@@ -67,7 +67,7 @@ public class DaznVodJan19
     private static SimpleDateFormat FORMATTER = new SimpleDateFormat("YYYYMMdd'T'HHmmss");
     private static String OUTPUT_BASE_PATH = "perform/vod-may-2019";
 
-    private static String COLLECTION = "cbr-vbv1sec-2pass-hrdfix";
+    private static String COLLECTION = "cbr-vbv1sec-2pass-hrdfix-8";
 
     private static String DEINTERLACE_FILTER_FRAME = "0c72a2b3-8f47-4a9d-9af5-af51f96e4a88";
     private static String DEINTERLACE_FILTER_FIELD = "23d68d5f-62dd-413d-99a2-d5e1cd95e397";
@@ -611,8 +611,6 @@ public class DaznVodJan19
                 filename = String.format("%s_aac_%dk", filename, outputConfig.getAudioBitrate() / 1000);
             }
         }
-
-
 
         return filename;
     }
